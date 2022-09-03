@@ -12,7 +12,7 @@ interface Props {
 
 type SectionDimensions = Pick<HTMLDivElement, "offsetTop" | "offsetHeight">;
 
-const ModelOverlay: React.FC<Props> = ({ model, children }) => {
+const ModelOverlay: React.FC<Props> = ({ model }, { children }) => {
   const { scrollY } = useWrapperScroll();
 
   const getSectionDimensions = useCallback(() => {
